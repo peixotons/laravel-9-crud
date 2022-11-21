@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Validator;
 use App\Models\ContactBooks;
 use Illuminate\Http\Request;
 
@@ -13,7 +14,7 @@ class ContactBookController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {       
+    {
         return view('index');
     }
     public function indexContacts()
@@ -21,7 +22,7 @@ class ContactBookController extends Controller
         $contacts = ContactBooks::all();
         return view('contact', compact('contacts'));
     }
-    
+
     /**
      * Show the form for creating a new resource.
      *
@@ -29,6 +30,33 @@ class ContactBookController extends Controller
      */
     public function create(Request $request)
     {
+
+        return view('create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        // Another way to save data in database
+        // $input = $request->all();
+        // ContactBooks::create($input);
+
+        $request->validate([
+            'name_contact' => 'required',
+            'email_contact' => 'required|email',
+            'phone_contact' => 'required',
+            'number' => 'required',
+            'address' => 'required',
+            'neighborhood' => 'required',
+            'state' => 'required',
+            'postcode' => 'required'
+        ]);
+
         $contact = new ContactBooks();
 
         $contact->name_contact = $request->name_contact;
@@ -43,20 +71,7 @@ class ContactBookController extends Controller
 
         $contact->save();
 
-        return view('create');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        $input = $request->all();
-        ContactBooks::create($input);
-        return redirect('student')->with('flash_message', 'Student Addedd!');
+        return redirect()->route('contacts')->with('message', 'Contact Successfully Added!');
     }
 
     /**
@@ -68,7 +83,7 @@ class ContactBookController extends Controller
     public function show()
     {
         $contacts = ContactBooks::all();
-        return view('',compact('contacts'));
+        return view('', compact('contacts'));
     }
 
     /**
@@ -79,8 +94,8 @@ class ContactBookController extends Controller
      */
     public function edit($id)
     {
-        $student = ContactBooks::find($id);
-        return view('contacts.edit')->with('contacts', $student);
+        $contacts = ContactBooks::find($id);
+        return view('contacts.edit')->with('contacts', $contacts);
     }
 
     /**
@@ -92,10 +107,10 @@ class ContactBookController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $student = ContactBooks::find($id);
+        $contacts = ContactBooks::find($id);
         $input = $request->all();
-        $student->update($input);
-        return redirect('student')->with('flash_message', 'student Updated!');
+        $contacts->update($input);
+        return redirect('contacts')->with('flash_message', 'contacts Updated!');
     }
 
     /**
@@ -106,7 +121,11 @@ class ContactBookController extends Controller
      */
     public function destroy($id)
     {
-        ContactBooks::destroy($id);
-        return redirect('contacts')->with('flash_message', 'Student deleted!');
+        // Another way to delete data -> ContactBooks::destroy($id);
+
+        $user = ContactBooks::findOrFail($id);
+        $user->delete();
+
+        return redirect('contacts')->with('flash_message', 'contacts deleted!');
     }
 }

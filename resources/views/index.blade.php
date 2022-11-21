@@ -10,7 +10,7 @@
             </div>
 
             <div class="photo">
-                <img src="{{ url('img/photohome.png') }}" class="rounded float-right" alt="Foto Home - Ilustração UI">
+                <img src="{{ url('img/photohome.png') }}" class="rounded float-right img-fluid" alt="Foto Home - Ilustração UI">
             </div>
         </div>
     </div>

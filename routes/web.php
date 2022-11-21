@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [ContactBookController::class, 'index'])->name('index');
+
 Route::get('/contacts', [ContactBookController::class, 'indexContacts'])->name('contacts');
 Route::get('/contacts/create', [ContactBookController::class, 'create'])->name('contacts.create');
-Route::delete('/contacts/delete/{id}', [ContactBookController::class, 'delete'])->name('contacts.delete');
+//STORE NEW CONTACT
+Route::post('/contacts/create/store', [ContactBookController::class, 'store'])->name('contacts.store');
+//DELETE CONTACT
+Route::delete('/contacts/delete/{id}', [ContactBookController::class, 'destroy'])->name('contacts.delete');
