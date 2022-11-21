@@ -15,12 +15,13 @@ class ContactBookController extends Controller
      */
     public function index()
     {
-        return view('index');
+        return view('contacts.index');
     }
+
     public function indexContacts()
     {
         $contacts = ContactBooks::all();
-        return view('contact', compact('contacts'));
+        return view('contacts.contact', compact('contacts'));
     }
 
     /**
@@ -31,7 +32,7 @@ class ContactBookController extends Controller
     public function create(Request $request)
     {
 
-        return view('create');
+        return view('contacts.create');
     }
 
     /**
@@ -53,6 +54,7 @@ class ContactBookController extends Controller
             'number' => 'required',
             'address' => 'required',
             'neighborhood' => 'required',
+            'city' => 'required',
             'state' => 'required',
             'postcode' => 'required'
         ]);
@@ -83,7 +85,7 @@ class ContactBookController extends Controller
     public function show()
     {
         $contacts = ContactBooks::all();
-        return view('', compact('contacts'));
+        return view('contacts.view', compact('contacts'));
     }
 
     /**
@@ -107,10 +109,22 @@ class ContactBookController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'name_contact' => 'required',
+            'email_contact' => 'required|email',
+            'phone_contact' => 'required',
+            'number' => 'required',
+            'address' => 'required',
+            'neighborhood' => 'required',
+            'city' => 'required',
+            'state' => 'required',
+            'postcode' => 'required'
+        ]);
+
         $contacts = ContactBooks::find($id);
         $input = $request->all();
         $contacts->update($input);
-        return redirect('contacts')->with('flash_message', 'contacts Updated!');
+        return redirect('contacts')->with('updated', 'Contact Successfully Updated!');
     }
 
     /**
@@ -126,6 +140,6 @@ class ContactBookController extends Controller
         $user = ContactBooks::findOrFail($id);
         $user->delete();
 
-        return redirect('contacts')->with('flash_message', 'contacts deleted!');
+        return redirect('contacts')->with('deleted', 'Contact Deleted!');
     }
 }

@@ -43,7 +43,7 @@
     @yield('content')
 
     <footer class="fixed-bottom text-center text-lg-start bg-dark text-muted">
-        <div class="text-center p-3 text-white" style="background-color: rgba(0, 0, 0, 0.025);">
+        <div class="text-center p-1 text-white" style="background-color: rgba(0, 0, 0, 0.025);">
             © 2022 Copyright:
             <a class="text-reset fw-bold text-white" href="https://www.linkedin.com/in/gabrielpeixe/">Peixoto Dev</a>
         </div>

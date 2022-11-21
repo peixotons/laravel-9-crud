@@ -5,7 +5,7 @@
         <div class="container-form">
             <div class="form">
                 <div class="titulo">
-                    <h3>New Contact</h3>
+                    <h3 class="fw-bold text-center">Add a New Contact</h3>
                 </div>
                 <form class="row g-3" action="{{ route('contacts.store') }}" method="post">
                     @csrf
@@ -33,7 +33,7 @@
                             <p class="alert alert-danger mt-2 p-2 error">{{ $message }}</p>
                         @enderror
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-6">
                         <label for="address" class="form-label">Address</label>
                         <input name="address" type="text" class="form-control @error('address') is-invalid @enderror" id="address"
                             placeholder="1234 Main St...">
@@ -46,6 +46,14 @@
                         <input name="number" type="text" class="form-control @error('number') is-invalid @enderror" id="number"
                             placeholder="House Number...">
                         @error('number')
+                            <p class="alert alert-danger mt-2 p-2 error">{{ $message }}</p>
+                        @enderror
+                    </div>
+                    <div class="col-md-2">
+                        <label for="city" class="form-label">City</label>
+                        <input name="city" type="text" class="form-control @error('city') is-invalid @enderror" id="city"
+                            placeholder="City...">
+                        @error('city')
                             <p class="alert alert-danger mt-2 p-2 error">{{ $message }}</p>
                         @enderror
                     </div>
@@ -101,7 +109,7 @@
                             <p class="alert alert-danger mt-2 p-2 error">{{ $message }}</p>
                         @enderror
                     </div>
-                    <div class="col-12 text-center">
+                    <div class="col-12 text-center mb-5">
                         <button type="submit" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Create</button>
                     </div>
                 </form>
