@@ -4,12 +4,12 @@
 
         <div class="col-md-12 mb-5">
             <div class="card">
-                <div class="card-header">
+                <div class="card-header text-center">
                     <h2>Contacts Book</h2>
                 </div>
                 <div class="card-body">
-                    <a href="{{ route('contacts.create') }}" class="btn btn-success btn-sm" title="Add New Student">
-                        <i class="fa fa-plus" aria-hidden="true"></i> New Contact
+                    <a href="{{ route('contacts.create') }}" class="btn btn-success text-center" title="Add New Student">
+                        <i class="fas fa-plus-circle"></i> New Contact
                     </a>
                     <div class="table-responsive">
                         @if (count($contacts) > 0)
@@ -17,7 +17,7 @@
                                 <div class="alert alert-success p-3 mt-3">{{ session('message') }}</div>
                             @endif
                             @if (session('deleted'))
-                                <div class="alert alert-danger p-3 mt-3">{{ session('deleted') }}</div>
+                                <div class="alert alert-danger p-3 mt-6 mb-6">{{ session('deleted') }}</div>
                             @endif
                             @if (session('updated'))
                                 <div class="alert alert-success p-3 mt-3">{{ session('updated') }}</div>
@@ -56,7 +56,7 @@
                                                     title="Edit Student"><button style="height:50px;width:60px;"
                                                         class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o"
                                                             aria-hidden="true"></i>
-                                                        Edit</button></a>
+                                                        <br>Edit</button></a>
                                                 <form method="POST" action="{{ route('contacts.delete', $contact->id) }}"
                                                     accept-charset="UTF-8" style="display:inline">
                                                     {{ method_field('DELETE') }}

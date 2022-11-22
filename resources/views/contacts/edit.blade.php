@@ -76,33 +76,39 @@
                         <label for="state" class="form-label">State</label>
                         <select name="state" id="state" class="form-select @error('state') is-invalid @enderror">
                             <option value="">Choose State</option>
-                            <option value="AC" {{ $contacts->state =='AC' ? 'selected' : '' }}>Acre</option>
-                            <option value="AL" {{ $contacts->state =='AL' ? 'selected' : '' }}>Alagoas</option>
-                            <option value="AP" {{ $contacts->state =='AP' ? 'selected' : '' }}>Amapá</option>
-                            <option value="AM" {{ $contacts->state =='AM' ? 'selected' : '' }}>Amazonas</option>
-                            <option value="BA" {{ $contacts->state =='BA' ? 'selected' : '' }}>Bahia</option>
-                            <option value="CE" {{ $contacts->state =='CE' ? 'selected' : '' }}>Ceará</option>
-                            <option value="DF" {{ $contacts->state =='DF' ? 'selected' : '' }}>Distrito Federal</option>
-                            <option value="ES" {{ $contacts->state =='ES' ? 'selected' : '' }}>Espírito Santo</option>
-                            <option value="GO" {{ $contacts->state =='GO' ? 'selected' : '' }}>Goiás</option>
-                            <option value="MA" {{ $contacts->state =='MA' ? 'selected' : '' }}>Maranhão</option>
-                            <option value="MT" {{ $contacts->state =='MT' ? 'selected' : '' }}>Mato Grosso</option>
-                            <option value="MS" {{ $contacts->state =='MS' ? 'selected' : '' }}>Mato Grosso do Sul</option>
-                            <option value="MG" {{ $contacts->state =='MG' ? 'selected' : '' }}>Minas Gerais</option>
-                            <option value="PA" {{ $contacts->state =='PA' ? 'selected' : '' }}>Pará</option>
-                            <option value="PB" {{ $contacts->state =='PB' ? 'selected' : '' }}>Paraíba</option>
-                            <option value="PR" {{ $contacts->state =='PR' ? 'selected' : '' }}>Paraná</option>
-                            <option value="PE" {{ $contacts->state =='PE' ? 'selected' : '' }}>Pernambuco</option>
-                            <option value="PI" {{ $contacts->state =='PI' ? 'selected' : '' }}>Piauí</option>
-                            <option value="RJ" {{ $contacts->state =='RJ' ? 'selected' : '' }}>Rio de Janeiro</option>
-                            <option value="RN" {{ $contacts->state =='RN' ? 'selected' : '' }}>Rio Grande do Norte</option>
-                            <option value="RS" {{ $contacts->state =='RS' ? 'selected' : '' }}>Rio Grande do Sul</option>
-                            <option value="RO" {{ $contacts->state =='RO' ? 'selected' : '' }}>Rondônia</option>
-                            <option value="RR" {{ $contacts->state =='RR' ? 'selected' : '' }}>Roraima</option>
-                            <option value="SC" {{ $contacts->state =='SC' ? 'selected' : '' }}>Santa Catarina</option>
-                            <option value="SP" {{ $contacts->state =='SP' ? 'selected' : '' }}>São Paulo</option>
-                            <option value="SE" {{ $contacts->state =='SE' ? 'selected' : '' }}>Sergipe</option>
-                            <option value="TO" {{ $contacts->state =='TO' ? 'selected' : '' }}>Tocantins</option>
+                            <option value="AC" {{ $contacts->state == 'AC' ? 'selected' : '' }}>Acre</option>
+                            <option value="AL" {{ $contacts->state == 'AL' ? 'selected' : '' }}>Alagoas</option>
+                            <option value="AP" {{ $contacts->state == 'AP' ? 'selected' : '' }}>Amapá</option>
+                            <option value="AM" {{ $contacts->state == 'AM' ? 'selected' : '' }}>Amazonas</option>
+                            <option value="BA" {{ $contacts->state == 'BA' ? 'selected' : '' }}>Bahia</option>
+                            <option value="CE" {{ $contacts->state == 'CE' ? 'selected' : '' }}>Ceará</option>
+                            <option value="DF" {{ $contacts->state == 'DF' ? 'selected' : '' }}>Distrito Federal
+                            </option>
+                            <option value="ES" {{ $contacts->state == 'ES' ? 'selected' : '' }}>Espírito Santo</option>
+                            <option value="GO" {{ $contacts->state == 'GO' ? 'selected' : '' }}>Goiás</option>
+                            <option value="MA" {{ $contacts->state == 'MA' ? 'selected' : '' }}>Maranhão</option>
+                            <option value="MT" {{ $contacts->state == 'MT' ? 'selected' : '' }}>Mato Grosso</option>
+                            <option value="MS" {{ $contacts->state == 'MS' ? 'selected' : '' }}>Mato Grosso do Sul
+                            </option>
+                            <option value="MG" {{ $contacts->state == 'MG' ? 'selected' : '' }}>Minas Gerais</option>
+                            <option value="PA" {{ $contacts->state == 'PA' ? 'selected' : '' }}>Pará</option>
+                            <option value="PB" {{ $contacts->state == 'PB' ? 'selected' : '' }}>Paraíba</option>
+                            <option value="PR" {{ $contacts->state == 'PR' ? 'selected' : '' }}>Paraná</option>
+                            <option value="PE" {{ $contacts->state == 'PE' ? 'selected' : '' }}>Pernambuco</option>
+                            <option value="PI" {{ $contacts->state == 'PI' ? 'selected' : '' }}>Piauí</option>
+                            <option value="RJ" {{ $contacts->state == 'RJ' ? 'selected' : '' }}>Rio de Janeiro
+                            </option>
+                            <option value="RN" {{ $contacts->state == 'RN' ? 'selected' : '' }}>Rio Grande do Norte
+                            </option>
+                            <option value="RS" {{ $contacts->state == 'RS' ? 'selected' : '' }}>Rio Grande do Sul
+                            </option>
+                            <option value="RO" {{ $contacts->state == 'RO' ? 'selected' : '' }}>Rondônia</option>
+                            <option value="RR" {{ $contacts->state == 'RR' ? 'selected' : '' }}>Roraima</option>
+                            <option value="SC" {{ $contacts->state == 'SC' ? 'selected' : '' }}>Santa Catarina
+                            </option>
+                            <option value="SP" {{ $contacts->state == 'SP' ? 'selected' : '' }}>São Paulo</option>
+                            <option value="SE" {{ $contacts->state == 'SE' ? 'selected' : '' }}>Sergipe</option>
+                            <option value="TO" {{ $contacts->state == 'TO' ? 'selected' : '' }}>Tocantins</option>
                         </select>
                         @error('state')
                             <p class="alert alert-danger mt-2 p-2 error">{{ $message }}</p>
@@ -111,14 +117,14 @@
                     <div class="col-md-4">
                         <label for="zipcode" class="form-label">Zip Code</label>
                         <input name="postcode" type="text" value="{{ $contacts->postcode }}"
-                            class="form-control @error('postcode') is-invalid @enderror" id="zipcode"
-                            placeholder="Zip Code...">
+                            class="form-control @error('postcode') is-invalid @enderror" minlength="8" maxlength="8"
+                            id="zipcode" placeholder="Zip Code...">
                         @error('postcode')
                             <p class="alert alert-danger mt-2 p-2 error">{{ $message }}</p>
                         @enderror
                     </div>
                     <div class="col-12 text-center mb-5">
-                        <button type="submit" class="btn btn-warning"><i class="fa fa-plus" aria-hidden="true"></i>
+                        <button type="submit" class="btn btn-warning"><i class="fas fa-wrench"></i>
                             Update</button>
                     </div>
                 </form>

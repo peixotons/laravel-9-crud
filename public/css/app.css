@@ -9,17 +9,12 @@ a:hover {
   opacity: 0.6;
 }
 
-.form-control {
+.form-control,
+.form-select,
+.error {
   border-radius: 40px ;
 }
 .form-control[multiple] {
   border-radius: 20px ;
-}
-.form-select {
-  border-radius: 40px;
-}
-
-.error {
-  border-radius: 40px;
 }
 

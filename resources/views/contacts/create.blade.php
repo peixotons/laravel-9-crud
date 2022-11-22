@@ -11,7 +11,8 @@
                     @csrf
                     <div class="col-md-4">
                         <label for="name_contact" class="form-label">Name</label>
-                        <input name="name_contact" type="text" class="form-control @error('name_contact') is-invalid @enderror" id="name_contact"
+                        <input name="name_contact" type="text"
+                            class="form-control @error('name_contact') is-invalid @enderror" id="name_contact"
                             placeholder="Name...">
                         @error('name_contact')
                             <p class="alert alert-danger mt-2 p-2 error">{{ $message }}</p>
@@ -19,7 +20,8 @@
                     </div>
                     <div class="col-md-4">
                         <label for="email_contact" class="form-label">Email</label>
-                        <input name="email_contact" type="email" class="form-control @error('email_contact') is-invalid @enderror" id="email_contact"
+                        <input name="email_contact" type="email"
+                            class="form-control @error('email_contact') is-invalid @enderror" id="email_contact"
                             placeholder="Email...">
                         @error('email_contact')
                             <p class="alert alert-danger mt-2 p-2 error">{{ $message }}</p>
@@ -27,7 +29,8 @@
                     </div>
                     <div class="col-md-4">
                         <label for="phone_contact" class="form-label">Phone</label>
-                        <input name="phone_contact" type="tel" class="form-control @error('phone_contact') is-invalid @enderror" id="phone_contact"
+                        <input name="phone_contact" type="tel"
+                            class="form-control @error('phone_contact') is-invalid @enderror" id="phone_contact"
                             placeholder="(99) 99999-9999">
                         @error('phone_contact')
                             <p class="alert alert-danger mt-2 p-2 error">{{ $message }}</p>
@@ -35,31 +38,32 @@
                     </div>
                     <div class="col-md-6">
                         <label for="address" class="form-label">Address</label>
-                        <input name="address" type="text" class="form-control @error('address') is-invalid @enderror" id="address"
-                            placeholder="1234 Main St...">
+                        <input name="address" type="text" class="form-control @error('address') is-invalid @enderror"
+                            id="address" placeholder="1234 Main St...">
                         @error('address')
                             <p class="alert alert-danger mt-2 p-2 error">{{ $message }}</p>
                         @enderror
                     </div>
                     <div class="col-md-4">
                         <label for="number" class="form-label">Number</label>
-                        <input name="number" type="text" class="form-control @error('number') is-invalid @enderror" id="number"
-                            placeholder="House Number...">
+                        <input name="number" type="text" class="form-control @error('number') is-invalid @enderror"
+                            id="number" placeholder="House Number...">
                         @error('number')
                             <p class="alert alert-danger mt-2 p-2 error">{{ $message }}</p>
                         @enderror
                     </div>
                     <div class="col-md-2">
                         <label for="city" class="form-label">City</label>
-                        <input name="city" type="text" class="form-control @error('city') is-invalid @enderror" id="city"
-                            placeholder="City...">
+                        <input name="city" type="text" class="form-control @error('city') is-invalid @enderror"
+                            id="city" placeholder="City...">
                         @error('city')
                             <p class="alert alert-danger mt-2 p-2 error">{{ $message }}</p>
                         @enderror
                     </div>
                     <div class="col-md-4">
                         <label for="neighborhood" class="form-label">Neighborhood</label>
-                        <input name="neighborhood" type="text" class="form-control @error('neighborhood') is-invalid @enderror" id="neighborhood"
+                        <input name="neighborhood" type="text"
+                            class="form-control @error('neighborhood') is-invalid @enderror" id="neighborhood"
                             placeholder="Neighborhood...">
                         @error('neighborhood')
                             <p class="alert alert-danger mt-2 p-2 error">{{ $message }}</p>
@@ -103,14 +107,15 @@
                     </div>
                     <div class="col-md-4">
                         <label for="zipcode" class="form-label">Zip Code</label>
-                        <input name="postcode" type="text" class="form-control @error('postcode') is-invalid @enderror" id="zipcode"
+                        <input name="postcode" type="text" minlength="8" maxlength="8"
+                            class="form-control @error('postcode') is-invalid @enderror" id="zipcode"
                             placeholder="Zip Code...">
                         @error('postcode')
                             <p class="alert alert-danger mt-2 p-2 error">{{ $message }}</p>
                         @enderror
                     </div>
                     <div class="col-12 text-center mb-5">
-                        <button type="submit" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Create</button>
+                        <button type="submit" class="btn btn-success"><i class="fas fa-plus-circle"></i> Create</button>
                     </div>
                 </form>
             </div>
