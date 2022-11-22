@@ -1,6 +1,7 @@
- Desafio: desenvolva um CRUD em Laravel 8+ de uma agenda de contatos, que deve
+ <h3>Desafio: desenvolva um CRUD em Laravel 8+ de uma agenda de contatos, que deve
 conter os seguintes campos: CEP, Estado, Cidade, Bairro, Endereço, Numero, Nome de Contato,
-Email de Contato e Telefone de Contato.
+Email de Contato e Telefone de Contato. </h3>
+<hr>
 1. O campo de Estado, tem que ser um combobox/select;
 2. Ao digitar um CEP, os demais campos devem ser preenchidos automaticamente com os
 dados vindo de uma API de endereços externa. (Use esta aqui:
