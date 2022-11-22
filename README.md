@@ -2,17 +2,17 @@
 conter os seguintes campos: CEP, Estado, Cidade, Bairro, Endereço, Numero, Nome de Contato,
 Email de Contato e Telefone de Contato. </h3>
 <hr>
-1. O campo de Estado, tem que ser um combobox/select;
-2. Ao digitar um CEP, os demais campos devem ser preenchidos automaticamente com os
+<p>1. O campo de Estado, tem que ser um combobox/select; </p>
+<p>2. Ao digitar um CEP, os demais campos devem ser preenchidos automaticamente com os
 dados vindo de uma API de endereços externa. (Use esta aqui:
-https://docs.awesomeapi.com.br/api-cep)
-3. Os dados devem ser gravados em um banco de dados relacional (Sqlite);
-4. Toda vez que um contato for cadastrado, envie um e-mail para um endereço que fica em
-alguma variável no .env (use o Mailgun ou outro serviço similar)
-5. Crie testes unitários no Laravel, que garanta que seu código esteja: cadastrando, atualizando,
-deletando e listando; Pode ser apenas um teste para cada ação;
-6. Pode usar qualquer framework css que achar melhor;
-7. Use código compatível com o PHP 8;
+https://docs.awesomeapi.com.br/api-cep)</p>
+<p>3. Os dados devem ser gravados em um banco de dados relacional (Sqlite);</p>
+<p>4. Toda vez que um contato for cadastrado, envie um e-mail para um endereço que fica em
+alguma variável no .env (use o Mailgun ou outro serviço similar)</p>
+<p>5. Crie testes unitários no Laravel, que garanta que seu código esteja: cadastrando, atualizando,
+deletando e listando; Pode ser apenas um teste para cada ação;</p>
+<p>6. Pode usar qualquer framework css que achar melhor;</p>
+<p>7. Use código compatível com o PHP 8;</p>
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
