@@ -29,7 +29,7 @@ class ContactBookController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {
 
         return view('contacts.create');
@@ -74,18 +74,6 @@ class ContactBookController extends Controller
         $contact->save();
 
         return redirect()->route('contacts')->with('message', 'Contact Successfully Added!');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show()
-    {
-        $contacts = ContactBooks::all();
-        return view('contacts.view', compact('contacts'));
     }
 
     /**
@@ -135,7 +123,7 @@ class ContactBookController extends Controller
      */
     public function destroy($id)
     {
-        // Another way to delete data -> ContactBooks::destroy($id);
+        // Another way to delete -> ContactBooks::destroy($id);
 
         $user = ContactBooks::findOrFail($id);
         $user->delete();

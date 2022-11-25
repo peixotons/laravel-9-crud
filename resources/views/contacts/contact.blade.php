@@ -17,7 +17,7 @@
                                 <div class="alert alert-success p-3 mt-3">{{ session('message') }}</div>
                             @endif
                             @if (session('deleted'))
-                                <div class="alert alert-danger p-3 mt-6 mb-6">{{ session('deleted') }}</div>
+                                <div class="alert alert-danger p-3 mt-3">{{ session('deleted') }}</div>
                             @endif
                             @if (session('updated'))
                                 <div class="alert alert-success p-3 mt-3">{{ session('updated') }}</div>
