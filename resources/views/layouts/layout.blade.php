@@ -20,25 +20,27 @@
 </head>
 
 <body class="">
-    <header class="p-2 mb-2 bg-dark">
-        <nav class="container navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand fw-bold ms-5 text-white" href="{{ route('index') }}">Contact Book Management</a>
-            <button class="navbar-toggler text-white bg-white" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link fw-bold p-1 me-5 text-white" href="{{ route('index') }}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold p-1 me-5 text-white" href="{{ route('contacts') }}">Contacts</a>
-                    </li>
-                </ul>
+    <div class="nav sticky-top bg-dark d-flex justify-content-between">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header ms-5">
+            <div class="nav-title">
+                Contact Book
             </div>
-        </nav>
-    </header>
+        </div>
+        <div class="nav-btn">
+            <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+        <div class="nav-links me-5">
+            <ul>
+                <li><a class="navbar-brand h1" href="{{ route('index') }}">Home</a></li>
+                <li><a class="navbar-brand h1" href="{{ route('contacts') }}">Contacts</a></li>
+            </ul>
+        </div>
+    </div>
 
     @yield('content')
 
@@ -46,6 +48,11 @@
         <div class="text-center p-1 text-white" style="background-color: rgba(0, 0, 0, 0.025);">
             © 2022 Copyright:
             <a class="text-reset fw-bold text-white" href="https://www.linkedin.com/in/gabrielpeixe/">Peixoto Dev</a>
+            <a style="color:#00ACEE;" class="fa fa-twitter mx-1 text-decoration-none"
+                href="https://twitter.com/Peixotons"></a>
+            <a class="fa fa-linkedin mx-1 text-decoration-none" href="https://www.linkedin.com/in/gabrielpeixe/"></a>
+            <a style="color:#c9510c;" class="fa fa-github mx-1 text-decoration-none"
+                href="https://github.com/peixotons"></a>
         </div>
     </footer>
     <!-- Option 1: Bootstrap Bundle with Popper -->
