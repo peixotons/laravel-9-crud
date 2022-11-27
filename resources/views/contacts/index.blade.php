@@ -4,8 +4,14 @@
         <div class="row">
             <div class="text col-md-6 mt-5">
                 <h3>Contact Book Management</h3>
-                <p>CRUD project developed with the laravel framework in order to review knowledge. <br>
-                    application allows you to enter, change and delete contacts, as well as, of course, list them.</p>
+                <p> <strong>CRUD project developed with the laravel framework in order to review knowledge.</strong>
+                    <br>
+                    The application lets you add, delete, edit and view each contact.
+                    When creating and editing a contact, the <strong>zip code automatically completes the address data for
+                        you.</strong>
+                    When creating a contact, I receive an email with the data entered in the form directly in my mailbox
+                    using <strong>Laravel's SMTP.</strong>
+                </p>
                 <a href="{{ route('contacts') }}"><button class="btn btn-success">Start</button></a>
             </div>
             <div class="col-md-6">
