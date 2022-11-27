@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactMail;
 use Illuminate\Support\Facades\Validator;
 use App\Models\ContactBooks;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactBookController extends Controller
 {
@@ -70,6 +72,8 @@ class ContactBookController extends Controller
         $contact->city = $request->city;
         $contact->state = $request->state;
         $contact->postcode = $request->postcode;
+
+        Mail::to('peixoto@hotmail.com')->send(new ContactMail($contact));
 
         $contact->save();
 
