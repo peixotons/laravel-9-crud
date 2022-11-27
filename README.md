@@ -8,7 +8,7 @@ dados vindo de uma API de endereços externa. (Use esta aqui:
 https://docs.awesomeapi.com.br/api-cep) 💹</p> 
 <p>3. Os dados devem ser gravados em um banco de dados relacional (Sqlite); 💹</p> 
 <p>4. Toda vez que um contato for cadastrado, envie um e-mail para um endereço que fica em
-alguma variável no .env (use o Mailgun ou outro serviço similar)</p> 
+alguma variável no .env (use o Mailgun ou outro serviço similar) 💹</p> 
 <p>5. Crie testes unitários no Laravel, que garanta que seu código esteja: cadastrando, atualizando,
 deletando e listando; Pode ser apenas um teste para cada ação;</p> 
 <p>6. Pode usar qualquer framework css que achar melhor; 💹</p> 
