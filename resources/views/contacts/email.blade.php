@@ -1,7 +1,8 @@
 <p>
     Hi, <br>
-    You have a new contact added to your website. <br> <br>
-    <strong>Details:</strong> <br>
+    You have a new contact added to your contact book management. <br> <br>
+    <strong>Details:</strong>
+    <br>
     <strong>Name:</strong> {{ $contact->name_contact }} <br>
     <strong>Email:</strong> {{ $contact->email }} <br>
     <strong>Phone:</strong> {{ $contact->phone_contact }} <br>
