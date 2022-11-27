@@ -16,7 +16,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
 
-    <title>Contact Book</title>
+    <title>Contact Book Management</title>
 </head>
 
 <body class="">
@@ -24,7 +24,7 @@
         <input type="checkbox" id="nav-check">
         <div class="nav-header ms-5">
             <div class="nav-title">
-                Contact Book
+                Contact Book Management
             </div>
         </div>
         <div class="nav-btn">

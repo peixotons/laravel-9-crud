@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="text col-md-6 mt-5">
-                <h3>Contact Book Management</h3>
+                <h3 class="mb-3">Contact Book</h3>
                 <p> <strong>CRUD project developed with the laravel framework in order to review knowledge.</strong>
                     <br>
                     The application lets you add, delete, edit and view each contact.
