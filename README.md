@@ -11,7 +11,7 @@ alguma variável no .env (use o Mailgun ou outro serviço similar) 💹</p>
 <p>5. Crie testes unitários no Laravel, que garanta que seu código esteja: cadastrando, atualizando,
 deletando e listando; Pode ser apenas um teste para cada ação;</p> 
 <p>6. Pode usar qualquer framework css que achar melhor; 💹</p> 
-<p>7. Use código compatível com o PHP 8; 💹</p> 
+<p>7. Use código compatível com o PHP 8;💹</p> 
 <hr>
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
