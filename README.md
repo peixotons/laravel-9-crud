@@ -10,7 +10,7 @@ https://docs.awesomeapi.com.br/api-cep) 💹</p>
 alguma variável no .env (use o Mailgun ou outro serviço similar) 💹</p> 
 <p>5. Crie testes unitários no Laravel, que garanta que seu código esteja: cadastrando, atualizando,
 deletando e listando; Pode ser apenas um teste para cada ação; ⛔</p> 
-<p>6. Pode usar qualquer framework css que achar melhor;💹</p> 
+<p>6. Pode usar qualquer framework css que achar melhor; 💹</p> 
 <p>7. Use código compatível com o PHP 8; 💹</p> 
 <hr>
 
